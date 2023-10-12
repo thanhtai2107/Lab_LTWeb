@@ -1,0 +1,56 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+
+}
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  background-color: #eeeeee;
+  margin: auto 100px;
+  border-left: 5px solid #8b0000;
+  border-bottom: 2px solid #8b0000;
+  padding: 0;
+
+}
+.menu-item {
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.menu-item:hover {
+  background-color: #8b0000;
+  color: white;
+  cursor: pointer;
+}
+.product-menu-item {
+  position: relative;
+}
+.product-menu-item:hover .sub-menu{
+  display: block;
+  top: 62px;
+  left: 0px;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+.sub-menu {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  background-color: #eeeeee;
+  width: 170px;
+}
+.sub-menu li {
+  color: black;
+  font-size: 17px;
+  border-bottom: 2px solid #c1bfbf;
+  padding: 20px 10px;
+}
+.sub-menu:hover{
+  cursor: pointer;
+}
+

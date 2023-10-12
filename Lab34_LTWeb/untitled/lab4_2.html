@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="main-wrapper">
+  <h1>Ket qua la:</h1>
+  <p id="result"></p>
+</div>
+</body>
+
+<script>
+  function resolve() {
+    const a = 2;
+    const b = 10;
+    const c = 5;
+    const delta = b*b - 4*a*c;
+    let  x1, x2;
+    if (delta < 0) {
+      document.getElementById("result").innerHTML = "Phuong trinh vo nghiem";
+    }
+    else if (delta === 0) {
+      x1 =  -b / (2*a);
+      document.getElementById("result").innerHTML = `Phuong trinh co nghiem kep x1=x2 = ${x1}`;
+    } else {
+      x1 = (-b + Math.sqrt(delta)) / 2*a;
+      x2 = (-b - Math.sqrt(delta)) / 2*a;
+      document.getElementById("result").innerHTML = `Phuong trinh co nghiem x1= ${x1} x2 = ${x2}`;
+    }
+    console.log(delta)
+  }
+  resolve();
+</script>
+</html>

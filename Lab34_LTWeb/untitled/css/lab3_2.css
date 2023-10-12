@@ -1,0 +1,66 @@
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.form {
+  width: 40%;
+  padding: 30px 40px;
+  border: 10px solid #e6e6e6;
+  border-radius: 10px;
+}
+.form h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0;
+}
+.form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  gap: 10px;
+}
+.form-input label {
+  font-size: 13px;
+  font-weight: 500;
+}
+.form-input input {
+  font-size: 15px;
+  color: #8f8e8e;
+}
+.form-input input, .form-input select, .form-input textarea {
+  border: none;
+  outline: none;
+  background-color: #f7f7f7;
+  padding: 0;
+}
+.email-phone-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.email-phone-wrapper .form-input {
+  width: 42%;
+}
+.form-input select, .form-input textarea {
+  color: #8f8e8e;
+}
+
+.form button {
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  border-radius: 60px;
+  background-color: #333333;
+  color: white;
+}

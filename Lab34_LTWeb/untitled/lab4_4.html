@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div class="main-wrapper">
+    <form>
+      <textarea id="textarea" cols="10" rows="4"></textarea>
+      <input id="input" type="text">
+      <button type="button" onclick="checkAppearance()">Check</button>
+      <p id="result">hello</p>
+    </form>
+  </div>
+</body>
+<script>
+  function checkAppearance() {
+    let count =0;
+    const textarea = document.getElementById("textarea").value;
+    const input = document.getElementById("input").value;
+    for (let i = 0; i < textarea.length; i++) {
+      if (textarea.substring(i, input.length + i) === input) {
+        count +=1;
+      }
+    }
+    document.getElementById("result").innerHTML = `So lan xuat hien cua B trong A la ${count}`;
+  }
+</script>
+</html>

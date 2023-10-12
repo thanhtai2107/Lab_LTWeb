@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/lab4_1.css">
+  <style>
+    .main-wrapper {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+<div id="main-wrapper" class="main-wrapper">
+  <button style="background-color: red" onclick="changeColor({color: 'red'})">Red</button>
+  <button style="background-color: yellow" onclick="changeColor({color : 'yellow'})">Yellow</button>
+  <button style="background-color: blue" onclick="changeColor({color : 'blue'})">Blue</button>
+  <button style="background-color: green" onclick="changeColor({color : 'green'})">Green</button>
+</div>
+</body>
+
+<script>
+  function changeColor({color}) {
+    document.getElementById("main-wrapper").style.backgroundColor = color;
+  }
+</script>
+</html>

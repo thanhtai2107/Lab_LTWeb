@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/lab3_3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2fdd50f686.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="form-wrapper">
+  <div class="form">
+    <h2>Sign in</h2>
+    <form action="" id="form">
+      <div class="form-input">
+        <div class="input-wrapper">
+          <input id="username" type="text" placeholder="username">
+        </div>
+        <div class="input-wrapper">
+          <input id="password" type="password" placeholder="password">
+        </div>
+      </div>
+      <div class="button">
+        <button>SIGN IN</button>
+      </div>
+      <div class="login-options">
+        <p>Or login with</p>
+        <div class="media-icons">
+          <div class="icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-google"></i>
+          </div>
+        </div>
+      </div>
+      <p class="sign-up">Sing up</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#form').submit(function (e){
+      e.preventDefault();
+      let username = $('#username').val()
+      let password = $('#password').val()
+
+      $('.error').remove()
+
+      if (username.length < 1) {
+        $('#username').after(
+          '<span class="error">This field is required<span/>'
+        )
+      } else {
+        let regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+        let validUsername = regEx.test(username);
+        if (!validUsername) {
+          $('#username').after(
+            '<span class="error">Enter username valid<span/>'
+          )
+        }
+      }
+      if(password.length < 8 ) {
+        $('#password').after(
+          '<span class="error">password must be at least 8 character<span/>'
+        )
+      }
+    })
+  })
+</script>
+</body>
+</html>
